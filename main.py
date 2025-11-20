@@ -12,6 +12,8 @@ from middlewares.i18n import i18n_middleware
 from aiogram_i18n.context import I18nContext
 from keyboard.default import main_menu, ijaraga_beraman
 from keyboard.inline import change_lang_menu
+from models.users import User
+from database import SessionLocal
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -25,12 +27,28 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 ADMIN_ID = os.getenv("ADMIN_ID")
 DEFAULT_LANGUAGE = os.getenv("DEFAULT_LANGUAGE", "uz")
 SUPPORTED_LANGUAGES = ["uz", "ru", "en"]
+# DATABASE_URL = os.getenv("")
 
 
 
 @dp.message(Command('start'))
 async def start(message: types.Message, i18n: I18nContext):
     await i18n.set_locale(DEFAULT_LANGUAGE)
+    try:
+        db = SessionLocal()
+        db_user = User(
+        telegram_id=message.from_user.id,
+        username=message.from_user.username,
+        first_name=message.from_user.first_name,
+        last_name=message.from_user.last_name,
+        language_code=message.from_user.language_code,
+        is_active=True
+    )
+        db.add(db_user)
+        db.commit()
+        db.refresh(db_user)
+    except:
+        pass
     await message.answer(i18n("start_text"), reply_markup=main_menu(i18n))
     
 @dp.message(lambda message, i18n: message.text == i18n("ijara_b"))
