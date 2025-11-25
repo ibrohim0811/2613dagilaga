@@ -96,101 +96,45 @@ def make_regions_keyboard(i18n: I18nContext):
 
     return kb
 
-ANDIJON_DISTRICTS = ["Andijon sh.", "Asaka", "Baliqchi", "Bo‘z", "Jalaquduq", "Izboskan"]
-BUXORO_DISTRICTS = ["Buxoro sh.", "G‘ijduvon", "Jondor", "Kogon", "Peshku", "Romitan"]
-FARGONA_DISTRICTS = ["Farg‘ona sh.", "Qo‘qon", "Marg‘ilon", "Bag‘dod", "Beshariq"]
-JIZZAX_DISTRICTS = ["Jizzax sh.", "Arnasoy", "Baxmal", "Zarbdor", "Zomin", "Do‘stlik"]
-NAMANGAN_DISTRICTS = ["Namangan sh.", "Chortoq", "Kosonsoy", "Mingbuloq", "Norin", "Pop"]
-NAVOIY_DISTRICTS = ["Navoiy sh.", "Karmana", "Konimex", "Navbahor", "Tomdi", "Uchquduq"]
-QASHQADARYO_DISTRICTS = ["Qarshi sh.", "G‘uzor", "Dehqonobod", "Chiroqchi", "Koson", "Nishon"]
-QORAQALPOGISTON_DISTRICTS = ["Nukus sh.", "Amudaryo", "Beruniy", "Chimboy", "Ellikqal’a"]
-SAMARQAND_DISTRICTS = ["Samarqand sh.", "Bulung‘ur", "Ishtixon", "Jomboy", "Kattaqo‘rg‘on"]
-SIRDARYO_DISTRICTS = ["Guliston sh.", "Boyovut", "Sayxunobod", "Sardoba", "Shirin"]
-SURXONDARYO_DISTRICTS = ["Termiz sh.", "Angor", "Boysun", "Denov", "Jarqo‘rg‘on"]
-TOSHKENT_VIL_DISTRICTS = ["Toshkent vil.", "Bekobod", "Chinoz", "Qibray", "Olmaliq", "Zangiota"]
-TOSHKENT_SH_DISTRICTS = ["Toshkent sh."]  # Toshkent shahri alohida
-XORAZM_DISTRICTS = ["Urganch sh.", "Xiva", "Shovot", "Yangiariq", "Yangibozor"]
+
 
 # =================================
 # Yordamchi funksiya: 2 ustunli keyboard
 # =================================
-def make_keyboard(items: list, row_width: int = 2, i18n: I18nContext = None, add_back=True):
-    rows = []
 
-    # Tarjima funksiyasi
-    _ = i18n.gettext if i18n else (lambda x: x)
+# def make_keyboard(i18n: I18nContext):
+#     markup = ReplyKeyboardMarkup(
+#     keyboard=[], 
+#     resize_keyboard=True
+# )
 
-    # Asosiy tugmalar
-    buttons = [KeyboardButton(text=_(item)) for item in items]
 
-    # Ustunlarga bo‘lish
-    for i in range(0, len(buttons), row_width):
-        rows.append(buttons[i:i+row_width])
+#     keyboard = []
+#     row = []
 
-    # Orqaga tugmasi (ixtiyoriy)
-    if add_back:
-        rows.append([KeyboardButton(text=_("back"))])
-        rows.append([KeyboardButton(text=_("back_main"))])
+#     for name in districts:
+#         row.append(KeyboardButton(text=name))
+#         if len(row) == 2:  # 2 ustunli
+#             keyboard.append(row)
+#             row = []
 
-    return ReplyKeyboardMarkup(
-        keyboard=rows,
-        resize_keyboard=True
-    )
+#     if row:  # oxirgi qolgan bo‘lsa
+#         keyboard.append(row)
+
+#     # Orqaga tugmalar
+#     keyboard.append([KeyboardButton(text=_("back"))])
+#     keyboard.append([KeyboardButton(text=_("back_main"))])
+
+#     return ReplyKeyboardMarkup(
+#         keyboard=keyboard,
+#         resize_keyboard=True
+#     )
 
 # =================================
 # Har bir viloyat uchun alohida funksiya
 # =================================
 def andijon():
-    kb = make_keyboard(ANDIJON_DISTRICTS)
-    return kb
+    # kb = make_keyboard(ANDIJON_DISTRICTS)
+    # return kb
 
-def buxoro():
-    kb = make_keyboard(BUXORO_DISTRICTS)
-    return kb
 
-def fargona():
-    kb = make_keyboard(FARGONA_DISTRICTS)
-    return kb
-
-def jizzax():
-    kb = make_keyboard(JIZZAX_DISTRICTS)
-    return kb
-
-def namangan():
-    kb = make_keyboard(NAMANGAN_DISTRICTS)
-    return kb
-
-def navoi():
-    kb = make_keyboard(NAVOIY_DISTRICTS)
-    return kb
-
-def qashqadaryo():
-    kb = make_keyboard(QASHQADARYO_DISTRICTS)
-    return kb
-
-def qoraqalpogiston():
-    kb = make_keyboard(QORAQALPOGISTON_DISTRICTS)
-    return kb
-
-def samarqand():
-    kb = make_keyboard(SAMARQAND_DISTRICTS)
-    return kb
-
-def sirdaryo():
-    kb = make_keyboard(SIRDARYO_DISTRICTS)
-    return kb
-
-def surxondaryo():
-    kb = make_keyboard(SURXONDARYO_DISTRICTS)
-    return kb
-
-def toshkent_vil():
-    kb = make_keyboard(TOSHKENT_VIL_DISTRICTS)
-    return kb
-
-def toshkent_sh():
-    kb = make_keyboard(TOSHKENT_SH_DISTRICTS)
-    return kb
-def xorazm():
-    kb = make_keyboard(XORAZM_DISTRICTS)
-    return kb

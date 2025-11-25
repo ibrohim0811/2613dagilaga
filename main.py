@@ -15,7 +15,7 @@ from keyboard.default import main_menu
 from keyboard.inline import change_lang_menu
 from models.users import User
 from database import SessionLocal
-from handlers.ijaraga_beraman.handler import dp as _dp
+from handlers.ijaraga_beraman.kvartira import dp as _dp
 
 
 
@@ -112,4 +112,3 @@ if __name__ == "__main__":
 
     asyncio.run(main())
     
-#chala qoldi i18n qilish  default buttonlarni qoyish
