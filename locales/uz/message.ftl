@@ -22,3 +22,20 @@ dacha= dacha
 office= Ofis
 back_main= 🏠 Bosh sahifa
 main_menu_text= Bosh sahifa 🏠
+
+bg----------------
+
+back = ⬅️ Ortga
+
+
+long_time = Uzoq muddatga
+daily = Kunlik
+
+bino_s = Qanday turdagi binoni ijaraga berasiz?  Tugmalardan birini tanlang 👇
+muddat = Qancha muddatga ijaraga berasiz?   Tugmalardan birini tanlang 👇
+viloyat = Qaysi viloyatda?    Tugmalardan birini tanlang 👇
+
+rgnbtn----
+
+boshqa_vil = 🌐 Boshqa viloyatni tanlash
+tuman = Tumanni tanlang 👇

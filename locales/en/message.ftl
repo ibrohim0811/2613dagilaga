@@ -18,3 +18,15 @@ dacha = Cottage
 office = Office
 back_main = 🏠 Main Menu
 main_menu_text= Main menu 🏠
+
+
+back = ⬅️ Back
+long_time = Long time
+daily = Daily
+
+bino_s = What type of building do you rent? Select one of the buttons 👇
+muddat = How long will you rent for? Choose one of the buttons 👇
+viloyat = In which region? Choose one of the buttons 👇
+
+boshqa_vil = 🌐 Choose another region
+tuman = Select a district 👇

@@ -6,22 +6,26 @@ from aiogram.filters import Command
 from pathlib import Path
 from aiogram import types
 from aiogram_i18n import I18nContext
+from aiogram.fsm.storage.memory import MemoryStorage
 
 from dotenv import load_dotenv
 from middlewares.i18n import i18n_middleware
 from aiogram_i18n.context import I18nContext
-from keyboard.default import main_menu, ijaraga_beraman
+from keyboard.default import main_menu
 from keyboard.inline import change_lang_menu
 from models.users import User
 from database import SessionLocal
+from handlers.ijaraga_beraman.handler import dp as _dp
+
 
 
 BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(BASE_DIR / ".env")
 
 
-dp = Dispatcher()
+dp = Dispatcher(storage=MemoryStorage())
 i18n_middleware.setup(dispatcher=dp)
+
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 ADMIN_ID = os.getenv("ADMIN_ID")
@@ -51,9 +55,7 @@ async def start(message: types.Message, i18n: I18nContext):
         pass
     await message.answer(i18n("start_text"), reply_markup=main_menu(i18n))
     
-@dp.message(lambda message, i18n: message.text == i18n("ijara_b"))
-async def ijaraga_b(msg: types.Message, i18n: I18nContext):
-    await msg.answer(i18n("select_section"), reply_markup=ijaraga_beraman(i18n))
+
     
 @dp.message(lambda message, i18n: message.text == i18n("back_main"))
 async def back_main(msg: types.Message, i18n: I18nContext):
@@ -100,7 +102,9 @@ async def about_bot(msg: types.Message, i18n: I18nContext):
 
 async def main():
     bot = Bot(token=BOT_TOKEN)
-    # i18n_middleware.setup(dispatcher=dp)
+    
+    dp.update.middleware(i18n_middleware)
+    dp.include_router(_dp)
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
