@@ -39,3 +39,74 @@ rgnbtn----
 
 boshqa_vil = 🌐 Boshqa viloyatni tanlash
 tuman = Tumanni tanlang 👇
+
+errors------------------------------
+
+err_button = Iltimos faqat tugmalardan foydalaning 👇
+back_1 = Ortga
+who = Kimlarga bermoqchisiz? 
+olcham = xona o'lchamini kiriting
+prsn---
+
+students = Talabalarga
+workers = Ishchilarga
+travels = Sayyohlarga
+family = Oilaga
+friend = Sheriklikga
+all = Hammaga
+back_to = 🔙 Orqaga
+back_rooms = 👈 Orqaga
+back_building = Orqaga 🔙
+send_img = Uyni yoki kvartira rasmini yuboring
+price = narxini kiriting 👇
+err_image = Iltimos faqat rasm yuboring !
+things = Uyingizdagi qulayliklarni kiriting
+tamir-----
+
+euro = Yevro ta'mir
+normal = O'rtacha ta'mir
+without = Ta'mirsiz
+tamir = Uyingizni ta'miri qanday?
+
+bektemir = Bektemir 
+
+chilonzor = Chilonzor 
+
+yashnobod = Yashnobod 
+
+mirzo = Mirzo Ulug‘bek 
+
+mirobod = Mirobod 
+
+olmazor = Olmazor 
+
+sergeli = Sergeli 
+
+shayxon = Shayxontohur 
+
+uchtepa = Uchtepa 
+
+yakkasaroy = Yakkasaroy 
+
+yunus = Yunusobod 
+
+yangihayot = Yangihayot 
+
+
+-------jihoz-------
+
+quvur = Kanalizatsiya
+video = Videokuzatuv
+internet = Internet tarmog'i
+wifi = Wifi tarmog'i
+gaz = Gaz taminoti
+suv = Suv taminoti
+air = Konditsioner
+pech = Mikroto'lqinli pech
+police = Qo'riqlash
+child = Bolalar maydoni
+mebel = Mebel
+vanna = Hammom
+wash = Kir yuvish mmashinasi
+lift = Lift
+parking = Avtoturargoh

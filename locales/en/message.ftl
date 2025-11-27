@@ -30,3 +30,43 @@ viloyat = In which region? Choose one of the buttons 👇
 
 boshqa_vil = 🌐 Choose another region
 tuman = Select a district 👇
+
+bektemir = Bektemir 
+
+chilonzor = Chilonzor 
+
+yashnobod = Yashnobod 
+
+mirzo = Mirzo Ulugbek 
+
+mirobod = Mirobod 
+
+olmazor = Olmazor 
+
+sergeli = Sergeli 
+
+shayxon = Shaykhontokhur 
+
+uchtepa = Uchtepa 
+
+yakkasaroy = Yakkasaroy 
+
+yunus = Yunusobod 
+
+yangihayot = Yangihayot 
+
+quvur = Sewerage 
+video = Video surveillance 
+internet = Internet network 
+wifi = Wi-Fi network 
+gaz = Gas supply 
+suv = Water supply 
+air = Air conditioner 
+pech = Microwave oven 
+police = Security 
+child = Playground 
+mebel = Furniture 
+vanna = Bathroom 
+wash = Washing machine 
+lift = Elevator 
+parking = Parking lot 
