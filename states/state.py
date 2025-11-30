@@ -9,6 +9,7 @@ class I_b_kvartira(StatesGroup):
     size = State()
     tamir = State()
     image = State()
+    jihoz = State()
     price = State()
     makler = State()
     phone = State()

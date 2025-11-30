@@ -1,72 +1,120 @@
-start_text = 👋 Hello, welcome to the rental bot
+start_text = 👋 Hello! Welcome to the rental bot
 language_button = 🌐 Change language
-ijara_o = 🔎 I want to rent
-ijara_b = 🔑 I want to rent out
+ijara_o = 🔎 Rent an object
+ijara_b = 🔑 Give for rent
 about = ❓ How it works
-----------------lang
-select_lang = Choose your preferred language 👇
+
+select_lang = Select the desired language 👇
 uzbek = Uzbek 🌍
 rus = Russian 🌍
 en = English 🌍
 sucsess_lang = Language successfully changed ✅
-about_text= How the IJARA-CHI project worksIf you want to rent out, click the IJARA-CHI button,enter the information in the required sections and wait for customer calls!       IJARA-CHI operates in Uzbek, Russian and English.If you have any comments, please contact @King_richer1!Thank you 🤝
-select_section= Select department which do you need 👇
 
+select_section = Select the desired section 👇
+about_text = IJARA-CHI project workflow: If you want to rent out, press the 'Give for rent' button, enter the information for the required sections, and wait for calls from clients! IJARA-CHI operates in Uzbek, Russian, and English. If you have comments, please contact @King_richer1! Thank you 🤝
 flat = Apartment
-house = House
-dacha = Cottage
+house = House / Yard
+dacha = Dacha
 office = Office
-back_main = 🏠 Main Menu
-main_menu_text= Main menu 🏠
+back_main = 🏠 Main page
+main_menu_text = Main page 🏠
 
+ha = Yes ✅
+yoq = No ❌
 
 back = ⬅️ Back
-long_time = Long time
+
+long_time = Long term
 daily = Daily
 
-bino_s = What type of building do you rent? Select one of the buttons 👇
-muddat = How long will you rent for? Choose one of the buttons 👇
-viloyat = In which region? Choose one of the buttons 👇
+bino_s = What type of property are you renting out? Select one of the buttons 👇
+muddat = For how long are you renting out? Select one of the buttons 👇
+viloyat = In which region (viloyat)? Select one of the buttons 👇
 
-boshqa_vil = 🌐 Choose another region
-tuman = Select a district 👇
+boshqa_vil = 🌐 Select another region
+tuman = Select the district 👇
+vosita = Is there a mediation fee?
+phone = Share phone number 📱
+num_error = The phone number must consist of digits!
+price_error = Enter the price in UZS and only in numbers
+izoh = Write a comment about the house or apartment, or press continue
+sorov = If everything is correct, press Yes, otherwise press No
+send = ✅ Your request has been sent to the Admin, it will be reviewed and forwarded!
+cancel = Request cancelled
+accepted = Accepted ✅
+declined = Declined ❌
 
-bektemir = Bektemir 
+err_btn = Invalid button! ❌
+things_ = Selected amenities
+if_ = If everything is correct, press the Continue button
+nothing = Nothing selected ❌
+housename = 🏠 Type
+time = ⌛ Period
+reg = 📍 District
+kim = 👨‍👩‍👧‍👦 For whom
+kim_ = 📐 Size
+mkv = 🚪 Number of rooms
+qurilish = ⚒️ Renovation
+jihozlar = ⚙️ Amenities
+price_ = 💰 Price
+tel = 📞 Contact
+ds = ✒️ Comment
+no = No ❌
+share_phone = Share your phone number via the button or enter it manually. Format: +998 90 123 45 56 or 90 123 45 67, without spaces between the digits!
+narx = Enter the price of the house in UZS
+xona = Enter the number of rooms in the house or apartment 👇
+xona_orq = Back ⬅️
+join_to = Join the group 📩
+offer = Do you want to rent an apartment, house, or office? Then join the group
+err_button = Please use only the buttons 👇
+back_1 = Back
+who = Who are you renting to?
+olcham = Enter the room size
+cont = Continue 👉
+students = Students
+workers = Workers
+travels = Tourists
+family = Family
+friend = Shared living
+all = Everyone
+back_to = 🔙 Back
+back_rooms = 👈 Back
+back_building = Back 🔙
+send_img = Send a photo of the house or apartment
+price = Enter the price 👇
+err_image = Please send only an image!
+things = Enter the amenities in your house
 
-chilonzor = Chilonzor 
+euro = Euro renovation
+normal = Average renovation
+without = No renovation
+tamir = What is the renovation status of your house?
 
-yashnobod = Yashnobod 
+bektemir = Bektemir
+chilonzor = Chilonzar
+yashnobod = Yashnabad
+mirzo = Mirzo Ulugbek
+mirobod = Mirabad
+olmazor = Almazar
+sergeli = Sergeli
+shayxon = Shaykhontohur
+uchtepa = Uchtepa
+yakkasaroy = Yakkasaray
+yunus = Yunusabad
+yangihayot = Yangihayot
 
-mirzo = Mirzo Ulugbek 
-
-mirobod = Mirobod 
-
-olmazor = Olmazor 
-
-sergeli = Sergeli 
-
-shayxon = Shaykhontokhur 
-
-uchtepa = Uchtepa 
-
-yakkasaroy = Yakkasaroy 
-
-yunus = Yunusobod 
-
-yangihayot = Yangihayot 
-
-quvur = Sewerage 
-video = Video surveillance 
-internet = Internet network 
-wifi = Wi-Fi network 
-gaz = Gas supply 
-suv = Water supply 
-air = Air conditioner 
-pech = Microwave oven 
-police = Security 
-child = Playground 
-mebel = Furniture 
-vanna = Bathroom 
-wash = Washing machine 
-lift = Elevator 
-parking = Parking lot 
+quvur = Sewerage
+video = Video surveillance
+internet = Internet access
+wifi = Wi-Fi
+gaz = Gas supply
+suv = Water supply
+air = Air conditioner
+pech = Microwave oven
+police = Security
+child = Children playground
+mebel = Furniture
+vanna = Bathroom
+wash = Washing machine
+lift = Elevator
+parking = Parking

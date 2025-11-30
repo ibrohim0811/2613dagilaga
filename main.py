@@ -9,25 +9,27 @@ from aiogram_i18n import I18nContext
 from aiogram.fsm.storage.memory import MemoryStorage
 
 from dotenv import load_dotenv
-from middlewares.i18n import i18n_middleware
+from middleware.i18n import i18n_middleware
 from aiogram_i18n.context import I18nContext
-from keyboard.default import main_menu
-from keyboard.inline import change_lang_menu
+from buttons.default import main_menu
+from buttons.inline import change_lang_menu
 from models.users import User
 from database import SessionLocal
 from handlers.ijaraga_beraman.kvartira import dp as _dp
+from handlers.ijaraga_olaman.ijara import ij
 
 
 
 BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(BASE_DIR / ".env")
-
+# Kanalingizning ID'si. Odatda '@kanalingiz_ismi' yoki -100 bilan boshlanadigan raqam.
 
 dp = Dispatcher(storage=MemoryStorage())
 i18n_middleware.setup(dispatcher=dp)
 
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
+
 ADMIN_ID = os.getenv("ADMIN_ID")
 DEFAULT_LANGUAGE = os.getenv("DEFAULT_LANGUAGE", "uz")
 SUPPORTED_LANGUAGES = ["uz", "ru", "en"]
@@ -105,6 +107,7 @@ async def main():
     
     dp.update.middleware(i18n_middleware)
     dp.include_router(_dp)
+    dp.include_router(ij)
     await dp.start_polling(bot)
 
 if __name__ == "__main__":

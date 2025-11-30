@@ -270,13 +270,106 @@ def tamir(i18n: I18nContext):
         resize_keyboard=True
     )
     
-def make_jihozlar(i18n: I18nContext, msg):
-    _ = i18n
-    # Bosilgan tugmaning matni
-    pressed = msg.text.strip() if msg and msg.text else None
+# def make_jihozlar(i18n: I18nContext, msg):
+#     _ = i18n
 
-    # Jihozlar ro‘yxati
-    jihozlar = [
+#     # Jihozlar keylari
+#     keys = [
+#         i18n("quvur"),
+#         i18n("video"),
+#         i18n("internet"),
+#         i18n("wifi"),
+#         i18n("gaz"),
+#         i18n("suv"),
+#         i18n("air"),
+#         i18n("pech"),
+#         i18n("police"),
+#         i18n("child"),
+#         i18n("mebel"),
+#         i18n("vanna"),
+#         i18n("wash"),
+#         i18n("lift"),
+#         i18n("parking"),
+#     ]
+
+#     # Foydalanuvchi bosgan tugma
+#     pressed = msg.text if msg and msg.text else None
+
+#     # Matnni keyga qaytarish (reverse i18n)
+#     def get_key_by_value(text):
+#         for k in keys:
+#             if _(k) == text:
+#                 return k
+#         return None
+
+#     pressed_key = get_key_by_value(pressed)
+
+#     # Agar mos key topilgan bo‘lsa — ro‘yxatdan o'chiramiz
+#     if pressed_key in keys:
+#         keys.remove(pressed_key)
+
+#     # Endi tarjima qilingan matn bilan keyboard yasaymiz
+#     keyboard = []
+#     row = []
+
+#     for idx, k in enumerate(keys, start=1):
+#         row.append(KeyboardButton(text=_(k)))
+
+#         if idx % 4 == 0:
+#             keyboard.append(row)
+#             row = []
+
+#     if row:
+#         keyboard.append(row)
+
+#     # Oxiriga back tugmalar
+#     keyboard.append([
+#         KeyboardButton(text=_("back_rooms")),
+#         KeyboardButton(text=_("back_main")),
+#     ])
+
+#     return ReplyKeyboardMarkup(
+#         keyboard=keyboard,
+#         resize_keyboard=True
+#     )
+
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+
+def xona(i18n) -> ReplyKeyboardMarkup:
+    
+    _ = i18n
+    
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text=("1")),
+                KeyboardButton(text=("2")),
+                KeyboardButton(text=("3")),
+                KeyboardButton(text=("4")),
+            ],
+            [
+            
+                KeyboardButton(text=("5")),
+                KeyboardButton(text=("6")),
+                KeyboardButton(text=("7")),
+                KeyboardButton(text=("8")),  
+            ],
+            [
+                KeyboardButton(text=("9")),
+                KeyboardButton(text=("10"))
+            ],
+            [
+                KeyboardButton(text=_("xona_orq")),
+                KeyboardButton(text=_("back_main"))
+            ]
+        ],
+        resize_keyboard=True
+    )
+
+def make_jihozlar(i18n):
+    # Keys ro‘yxati (display matnlar)
+    keys = [
+        i18n("cont"),
         i18n("quvur"),
         i18n("video"),
         i18n("internet"),
@@ -294,17 +387,13 @@ def make_jihozlar(i18n: I18nContext, msg):
         i18n("parking"),
     ]
 
-    # Bosilgan tugmani ro‘yxatdan olib tashlash
-    if pressed in jihozlar:
-        jihozlar.remove(pressed)
 
-    # 4 ustunli keyboard yasash
+    # 4 ustunli keyboard yaratish
     keyboard = []
     row = []
 
-    for idx, item in enumerate(jihozlar, start=1):
-        row.append(KeyboardButton(text=item))
-
+    for idx, k in enumerate(keys, start=1):
+        row.append(KeyboardButton(text=k))
         if idx % 4 == 0:
             keyboard.append(row)
             row = []
@@ -312,55 +401,64 @@ def make_jihozlar(i18n: I18nContext, msg):
     if row:
         keyboard.append(row)
 
-    # Oxiriga Back tugmalarini qo‘shish
+    # Oxiriga Back tugmalarini qo‘shamiz
     keyboard.append([
-        KeyboardButton(text=_("back_rooms")),
-        KeyboardButton(text=_("back_main")),
+        KeyboardButton(text=i18n("back_rooms")),
+        KeyboardButton(text=i18n("back_main")),
     ])
 
     return ReplyKeyboardMarkup(
         keyboard=keyboard,
         resize_keyboard=True
     )
+    
+def vosita(i18n) -> ReplyKeyboardMarkup:
+    
+    _ = i18n
+    
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text=_("yoq"))
+            ],
+            [
+                KeyboardButton(text=("50%")),
+                KeyboardButton(text=("40%"))
+            ],
+            [
+                KeyboardButton(text=("30%")),
+                KeyboardButton(text=("20%"))
+            ],
+            [
+                KeyboardButton(text=("10%")),
+                KeyboardButton(text=("5%"))
+            ],
+            [
+                KeyboardButton(text=_("back_main"))
+            ]
+        ],
+        resize_keyboard=True
+    )
+
+import re
 
 
-# =================================
-# Yordamchi funksiya: 2 ustunli keyboard
-# =================================
-
-# def make_keyboard(i18n: I18nContext):
-#     markup = ReplyKeyboardMarkup(
-#     keyboard=[], 
-#     resize_keyboard=True
-# )
-
-
-#     keyboard = []
-#     row = []
-
-#     for name in districts:
-#         row.append(KeyboardButton(text=name))
-#         if len(row) == 2:  # 2 ustunli
-#             keyboard.append(row)
-#             row = []
-
-#     if row:  # oxirgi qolgan bo‘lsa
-#         keyboard.append(row)
-
-#     # Orqaga tugmalar
-#     keyboard.append([KeyboardButton(text=_("back"))])
-#     keyboard.append([KeyboardButton(text=_("back_main"))])
-
-#     return ReplyKeyboardMarkup(
-#         keyboard=keyboard,
-#         resize_keyboard=True
-#     )
-
-# =================================
-# Har bir viloyat uchun alohida funksiya
-# =================================
-
-    # kb = make_keyboard(ANDIJON_DISTRICTS)
-    # return kb
-
-
+def validate_phone_number(phone_number: str):
+    pattern = r'^\+998\d{9}$|^\d{9}$'
+    match = re.match(pattern, phone_number)
+    if match:
+        return True
+    else:
+        return False
+    
+def phone(i18n) -> ReplyKeyboardMarkup:
+    
+    _ = i18n
+    
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [KeyboardButton(text=_("phone"), request_contact=True)],
+            [KeyboardButton(text=_("back_main"))]
+        ],
+        resize_keyboard=True
+    )

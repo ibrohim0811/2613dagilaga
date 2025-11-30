@@ -18,10 +18,13 @@ about_text= IJARA-CHI loyihasi ishlash tartibiIjaraga bermoqchi bo‘lsangiz Ija
 
 flat = Kvartira
 house= Uy hovli
-dacha= dacha
+dacha= Dacha
 office= Ofis
 back_main= 🏠 Bosh sahifa
 main_menu_text= Bosh sahifa 🏠
+
+ha = Ha ✅
+yoq = Yo'q ❌
 
 bg----------------
 
@@ -39,15 +42,47 @@ rgnbtn----
 
 boshqa_vil = 🌐 Boshqa viloyatni tanlash
 tuman = Tumanni tanlang 👇
+vosita = Vositachilik haqqi bormi?
+phone = Telefon raqamni ulashish 📱
+num_error= Telefon raqam raqamlardan iborat bo'lishi shart!
+price_error= Narxni UZS da va sonlarda kiriting
+izoh = Uy yoki kvartira haqida Izoh yozib keting yoki davom etishni bosing
+sorov = Agar hammasi to'g'ri bo'lsa Ha ni bo'lmasa yo'qni bosing
+send = ✅ Sizning so'rovingiz Adminga yuborildi tekshirilib chiqib adminga yuboriladi !
+cancel = So'rov qabul qilinmadi
+accepted = Qabul qilndi ✅
+declined =  Qabul qilinmadi ❌
 
+----house-------------
+err_btn = Noto‘g‘ri tugma! ❌
+things_ = Tanlangan jihozlar
+if_ = Agar hammasi to'g'ri bo'lsa davom etish tumasini bosing
+nothing = Hech narsa tanlanmadi ❌
+housename = 🏠 Turi
+time = ⌛ Muddati
+reg = 📍 Tuman
+kim = 👨‍👩‍👧‍👦 Kimlar uchun
+kim_ = 📐 O'lcham
+mkv = 🚪 Xonalar soni
+qurilish = ⚒️ ta'mir
+jihozlar = ⚙️ Jihozlar
+price_ = 💰 narx
+tel = 📞 Bog'lanish
+ds = ✒️ Izoh
+no = Yo'q ❌
+share_phone = Telefon raqamingizni tugma orqali ulashing yoki qo'lda yozing Format:+998 90 123 45 56 yoki 90 123 45 67 raqamlar orasida joy tashlamasdan yozing!
 errors------------------------------
-
+narx = Uyning narxini UZS kiriting
+xona = Uy yoki kvartira xonasini kiriting 👇
+xona_orq = Orqaga ⬅️
+join_to = Guruhga qo'shilish 📩
+offer= Kvartira, uy, hovli yoki offis olmoqchimisiz? Unda guruhga qo'shiling
 err_button = Iltimos faqat tugmalardan foydalaning 👇
 back_1 = Ortga
 who = Kimlarga bermoqchisiz? 
 olcham = xona o'lchamini kiriting
 prsn---
-
+cont = Davom etish 👉
 students = Talabalarga
 workers = Ishchilarga
 travels = Sayyohlarga
