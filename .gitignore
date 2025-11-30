@@ -20,8 +20,8 @@ ENV/
 .DS_Store
 
 # Environment variables
-.env
-.env.*
+# .env
+# .env.*
 
 # Database files (optional)
 *.sqlite3
